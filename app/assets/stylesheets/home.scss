@@ -1,10 +1,4 @@
-html, body,
-ul, ol, li,
-h1, h2, h3, h4, h5, h6, p,
-form, input, div {
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
@@ -54,7 +48,7 @@ main{
 }
 
 #contents{
-  width:80%;
+  width:90%;
   height:500px;
   margin:0 auto;
   padding:50px 0 50px 0;
@@ -69,7 +63,7 @@ main{
 
 .card{
   margin:0 auto;
-  width:80%;
+  width:70%;
   height:500px;
   background-color:#000080;
   color:white;
@@ -92,9 +86,17 @@ main{
   }
 }
 
-.text-box{
-padding-top:100px;
-display:none;
+#text-box-walk{
+  padding-top:100px;
+  display:none;
+  p{
+    font-size:18px;
+  }
+}
+
+#text-box-del{
+  padding-top:100px;
+  display:none;
   p{
     font-size:18px;
   }

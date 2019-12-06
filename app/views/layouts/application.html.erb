@@ -5,50 +5,54 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <% yield :head %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
-  <header>
-    <div id ="header-logo">かしま園</div>
-    <div id="header-list">
-      <ul>
-        <li>当園の紹介</li>
-        <li>パンジーウォーク</li>
-        <li>パンジーデリバリー</li>
-        <li>カタログ</li>
-        <li>庭先栽培</li>
-        <li>アクセス</li>
-        <li>SNS</li>
-      </ul>
-    </div>
-
-  </header>
-
 
   <body>
+    <header>
+      <div id ="header-logo"><a href="/">かしま園</a></div>
+      <div id="header-list">
+        <ul>
+          <li><a href="/about">当園の紹介</a></li>
+          <li><a href="/pansywalk">パンジーウォーク</a></li>
+          <li>パンジーデリバリー</li>
+          <li>カタログ</li>
+          <li>庭先栽培</li>
+          <li>アクセス</li>
+          <li>SNS</li>
+        </ul>
+      </div>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <div id="adress">
+        <p>かしま園</p>
+        <p>〒211-0041神奈川県川崎市中原区<br>下小田中5-1-2</p>
+        <p>TEL044-777-0923<br>FAX044-751-0332</p>
+      </div>
+
+
+      <div id="footer-list">
+        <ul>
+          <li><a href="/about">当園の紹介</a></li>
+          <li><a href="/pansywalk">パンジーウォーク</a></li>
+          <li>パンジーデリバリー</li>
+          <li>カタログ</li>
+          <li>庭先栽培</li>
+          <li>アクセス</li>
+          <li>SNS</li>
+        </ul>
+      </div>
+    </footer>
+
+    <%= yield :bottom %>
   </body>
 
-  <footer>
-
-    <div id="adress">
-      <p>かしま園</p>
-      <p>〒211-0041神奈川県川崎市中原区<br>下小田中5-1-2</p>
-      <p>TEL044-777-0923<br>FAX044-751-0332</p>
-    </div>
-
-
-    <div id="footer-list">
-      <ul>
-        <li>当園の紹介</li>
-        <li>パンジーウォーク</li>
-        <li>パンジーデリバリー</li>
-        <li>カタログ</li>
-        <li>庭先栽培</li>
-        <li>アクセス</li>
-        <li>SNS</li>
-      </ul>
-    </div>
-  </footer>
 </html>
